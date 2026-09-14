@@ -1,0 +1,20 @@
+{
+  "lang": "en",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "generatedAt": 1788902120,
+  "posts": {
+    "curiosities/100-posts-knowledge-graph-retrospective": {
+      "slug": "100-posts-knowledge-graph-retrospective",
+      "category": "curiosities",
+      "lang": "en",
+      "voice": "en-US-AndrewMultilingualNeural",
+      "hash": "153ee03744cda0ec6b32307fb7587512050137da8013f41ce47616fa89dd6ec8",
+      "sourceHash": "153ee03744cda0ec6b32307fb7587512050137da8013f41ce47616fa89dd6ec8",
+      "durationSec": 1120.68,
+      "byteSize": 6724080,
+      "narrationWordCount": 5179,
+      "audioUrl": "/blog/audio/curiosities/100-posts-knowledge-graph-retrospective.mp3",
+      "translationModel": ""
+    }
+  }
+}

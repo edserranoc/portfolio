@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Juan Lara — Writing</title>
+    <link>https://edserranoc.github.io/portfolio/blog</link>
+    <atom:link href="https://edserranoc.github.io/portfolio/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Technical writing on machine learning, AI agents, NLP, and data engineering — research notes, field notes, and curiosities.</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Aug 2027 00:00:00 GMT</lastBuildDate>
+    <generator>build-rss.js</generator>
+  <item>
+    <title>100 Posts as a Knowledge Graph: A Retrospective in Network Science</title>
+    <link>https://edserranoc.github.io/portfolio/blog/curiosities/100-posts-knowledge-graph-retrospective</link>
+    <guid isPermaLink="true">https://edserranoc.github.io/portfolio/blog/curiosities/100-posts-knowledge-graph-retrospective</guid>
+    <pubDate>Thu, 12 Aug 2027 00:00:00 GMT</pubDate>
+    <description><![CDATA[When you write 99 posts and then plot the result as a graph, the picture is not what you thought you were drawing. This is post number 100, and instead of a victory lap I ran the corpus through networkx: 99 nodes, 685k words, 223 tags, 2,408 tag-tag edges. What the structure reveals is more interesting than the chronology. There is a spine, four-and-a-half communities, a long tail of singleton tags that I tagged once and forgot, a handful of bridge posts holding the graph together, and a measurable bias toward production over theory. This is the blog reading itself, with real numbers, real cluster names, and the uncomfortable parts left in.]]></description>
+    <category>curiosities</category>
+    <category>Knowledge Graphs</category>
+    <category>Graph Theory</category>
+    <category>Mathematics</category>
+    <category>Algorithms</category>
+    <category>Software Engineering</category>
+    <category>Best Practices</category>
+    <category>Statistics</category>
+    <category>Data Engineering</category>
+    <category>Information Retrieval</category>
+    <category>Computer Science</category>
+    <enclosure url="https://pub-00d57ee081654fe389ef2660b8f38f69.r2.dev/audio/curiosities/100-posts-knowledge-graph-retrospective.mp3" length="6724080" type="audio/mpeg" />
+    <dc:creator>Juan Lara</dc:creator>
+  </item>
+  </channel>
+</rss>
