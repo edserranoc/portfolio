@@ -1,0 +1,45 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+/src/data/*
+!/src/data/brand.js
+!/src/data/series.js
+!/src/data/blogData.json
+!/src/data/book-aliases.json
+!/src/data/booksData.json
+
+# Keep original images locally but don't push to repo (save space)
+# The optimized versions and WebP will be tracked
+public/images/**/*-original.*
+public/images/**/*-optimized.*
+public/blog/**/*-original.*
+public/blog/**/*-optimized.*
+
+# Generated PDF output
+/output/
+
+# Audio generation scratch (voice samples, translation experiments, bulk run logs)
+scripts/audio-experiments/
+
+package-lock.json

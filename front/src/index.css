@@ -1,0 +1,611 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* --------------------------------------------------------------------------
+   Theme variables
+   Keep variables compact and centralized so consumers can rely on them.
+   ------------------------------------------------------------------------- */
+
+@media (max-width:320px){
+  header[class*="fixed"]{min-height:80px}
+  .hero-section{padding-top:5.5rem!important}
+  /* Keep consistent - no override */
+  .mobile-card{border-radius:.5rem!important}
+  
+  /* Profile card on very small screens */
+  .mobile-card-optimized {
+    max-width: 260px !important;
+    padding: 1rem !important;
+  }
+}
+
+:root{
+  --primary:#2563eb;--primary-dark:#1d4ed8;--primary-light:#60a5fa;--primary-shadow:rgba(37,99,235,.2);
+  --secondary:#4338ca;--secondary-dark:#3730a3;--secondary-light:#818cf8;--secondary-shadow:rgba(67,56,202,.2);
+  --bg-primary:#fff;--bg-secondary:#f8fafc;--bg-accent:#f0f5ff;
+  --text-primary:#0f172a;--text-secondary:#334155;--text-tertiary:#64748b;
+  --primary-dark-mode:#3b82f6;--primary-dark-mode-dark:#2563eb;--primary-dark-mode-light:#93c5fd;--primary-shadow-dark:rgba(59,130,246,.5);
+  --bg-primary-dark:#0f172a;--text-primary-dark:#f1f5f9;--text-secondary-dark:#cbd5e1;--text-tertiary-dark:#94a3b8;
+  --transition-slow:700ms cubic-bezier(.22,1,.36,1);--transition-medium:500ms cubic-bezier(.22,1,.36,1);--transition-fast:300ms cubic-bezier(.22,1,.36,1);
+  --shadow-sm:0 1px 2px rgba(0,0,0,.05);--shadow-md:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -1px rgba(0,0,0,.06);
+  --shadow-lg:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05);--shadow-xl:0 20px 25px -5px rgba(0,0,0,.1),0 10px 10px -5px rgba(0,0,0,.04);
+  --shadow-focus:0 0 0 3px var(--primary-shadow);--shadow-focus-dark:0 0 0 3px var(--primary-shadow-dark);
+}
+
+/* --------------------------------------------------------------------------
+   Small, reusable utilities & effects
+   ----------------------------------------------------------------------- */
+.shadow-glass{box-shadow:0 8px 32px rgba(0,0,0,.1);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.dark .shadow-glass{box-shadow:0 8px 32px rgba(0,0,0,.3)}
+.glass{background:rgba(255,255,255,.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.2)}
+.dark .glass{background:rgba(15,23,42,.7);border:1px solid rgba(255,255,255,.1)}
+
+@keyframes float{0%{transform:translateY(0)}50%{transform:translateY(-10px)}100%{transform:translateY(0)}}
+.animate-float{animation:float 4s ease-in-out infinite}
+@keyframes pulse-subtle{0%{opacity:.7}50%{opacity:1}100%{opacity:.7}}
+.animate-pulse-subtle{animation:pulse-subtle 3s ease-in-out infinite}
+
+.shimmer{position:relative;overflow:hidden}
+.shimmer::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.2) 50%,rgba(255,255,255,0) 100%);transform:translateX(-100%);animation:shimmer 3s infinite}
+.dark .shimmer::after{background:linear-gradient(90deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.1) 50%,rgba(255,255,255,0) 100%)}
+@keyframes shimmer{100%{transform:translateX(100%)}}
+
+.bg-scan-lines{background-image:repeating-linear-gradient(0deg,rgba(0,0,0,.15),rgba(0,0,0,.15) 1px,transparent 1px,transparent 2px);background-size:100% 2px;pointer-events:none}
+
+/* Focus styles (accessibility) */
+*:focus-visible{outline:none;box-shadow:var(--shadow-focus);transition:box-shadow .2s}
+.dark *:focus-visible{box-shadow:var(--shadow-focus-dark)}
+
+/* --------------------------------------------------------------------------
+   Layout & global mobile optimizations
+   Keep safe, non-breaking defaults for html/body and #root
+   ----------------------------------------------------------------------- */
+html,body{overscroll-behavior:none;position:relative;height:100%;min-height:100vh;background-color:#fff;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;-webkit-tap-highlight-color:transparent;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+
+/* Enhanced professional transitions and overlay system */
+* {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+/* Professional overlay system with proper dark mode support */
+.overlay-light {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
+
+.dark .overlay-light {
+  background: linear-gradient(135deg, 
+    rgba(55, 65, 81, 0.08) 0%, 
+    rgba(75, 85, 99, 0.04) 50%, 
+    rgba(55, 65, 81, 0.08) 100%
+  );
+}
+
+/* Professional backdrop blur effects */
+.backdrop-blur-professional {
+  backdrop-filter: blur(8px) saturate(150%);
+  -webkit-backdrop-filter: blur(8px) saturate(150%);
+}
+
+/* Enhanced card hover states */
+.card-hover-professional {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-hover-professional:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dark .card-hover-professional:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Professional scroll reveal animations */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s,
+              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scroll-reveal-right {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s,
+              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+}
+
+.scroll-reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.scroll-reveal-left {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s,
+              transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s;
+}
+
+.scroll-reveal-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.dark html,.dark body{background-color:#111827}
+#root{min-height:100vh;position:relative;-webkit-overflow-scrolling:touch}
+
+.mobile-optimized{min-height:44px;min-width:44px}
+.touch-target{min-height:48px;min-width:48px;display:inline-flex;align-items:center;justify-content:center}
+
+@supports(padding:env(safe-area-inset-top)){.safe-top{padding-top:env(safe-area-inset-top)}.safe-bottom{padding-bottom:env(safe-area-inset-bottom)}}
+
+/* Reduced-motion preference */
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* --------------------------------------------------------------------------
+   Consolidated mobile rules: use a small set of breakpoints and keep classes
+   referenced by components intact. These are intentionally conservative.
+   ----------------------------------------------------------------------- */
+
+/* Mobile: up to 768px - consistent navbar + general mobile optimizations */
+@media (max-width:768px){
+  header[class*="fixed"]{min-height:72px}
+  .hero-section{padding-top:4rem!important}
+  html{font-size:16px}
+  body{text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+  button,[role="button"],input[type="submit"]{cursor:pointer;-webkit-tap-highlight-color:rgba(0,0,0,.1);touch-action:manipulation}
+  input,textarea,select{font-size:16px}
+  .scroll-container{-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+
+  /* Performance-friendly adjustments */
+  .animate-float{animation:none}
+  .shadow-glass{backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+  .parallax-element{transform:none!important}
+  .bg-gradient-to-br,.bg-gradient-to-r{background-attachment:local}
+  img{image-rendering:auto;-webkit-optimize-contrast:auto}
+
+  /* Force single-column grids for content-heavy pages */
+  .mobile-grid-single,.mobile-grid-double{display:grid!important;grid-template-columns:1fr!important;gap:1rem!important}
+
+  /* Ensure children don't span multiple columns on mobile (overrides Tailwind col-span-*) */
+  .mobile-grid-single > *, .mobile-grid-double > * {
+    grid-column-start: auto !important;
+    grid-column-end: auto !important;
+    grid-column: auto !important;
+  }
+
+  /* Card sizing for improved readability on phones */
+  /* No longer override padding - let Tailwind classes handle it consistently */
+  /* .mobile-card-container uses px-4 sm:px-6 across all pages now */
+  
+  /* Slightly tighter cards on phones to allow more content on screen */
+  .mobile-card{margin-left:0!important;margin-right:0!important;border-radius:.875rem!important;margin-bottom:1rem!important}
+  .mobile-card-large{padding:1.25rem!important;font-size:1rem!important;line-height:1.5!important}
+  .mobile-card-optimized{width:100%!important;box-sizing:border-box!important}
+
+  /* Blog content specific optimizations */
+  /* Handled by Tailwind classes on the container now */
+
+  /* Better text readability on blog posts */
+  article p, article li{font-size:1rem!important;line-height:1.7!important}
+  article h1, article h2, article h3{margin-top:1.75rem!important;margin-bottom:0.875rem!important}
+
+  /* Excerpt boxes on mobile - reduce padding */
+  article .mb-8.p-6{padding:1.25rem!important;margin-bottom:1.5rem!important}
+  
+  /* Code blocks - better visibility and scrolling */
+  article pre, article code[class*="language-"]{
+    font-size:0.875rem!important;
+    line-height:1.5!important;
+    max-width:100%!important;
+    overflow-x:auto!important;
+  }
+  
+  /* Inline code better visibility */
+  article code:not([class*="language-"]){
+    padding:0.15rem 0.4rem!important;
+    font-size:0.9rem!important;
+    background:rgba(229,231,235,1)!important;
+    border:1px solid rgba(209,213,219,1)!important;
+  }
+  
+  .dark article code:not([class*="language-"]){
+    background:rgba(55,65,81,0.8)!important;
+    border:1px solid rgba(75,85,99,1)!important;
+    color:rgba(229,231,235,1)!important;
+  }
+
+  /* Text inside cards */
+  /* Slightly smaller typography to fit more content while keeping proportions */
+  .mobile-card-text,.mobile-card p,.mobile-card .line-clamp-3,.mobile-card .line-clamp-2{font-size:0.95rem!important;line-height:1.5!important}
+  .mobile-card-title,.mobile-card h2,.mobile-card h3{font-size:1.125rem!important;line-height:1.25!important;margin-bottom:.4rem!important}
+  .mobile-card-subtitle,.mobile-card small,.mobile-card .text-sm{font-size:.9rem!important}
+
+  /* Slight global refinement for card descriptions and tags
+    - make descriptions a touch smaller and tighter for better density
+    - improve tag (chip) contrast, padding and borders in both themes
+  */
+  .card-description{font-size:0.94rem;line-height:1.45;color:var(--text-secondary);}
+  .dark .card-description{color:var(--text-secondary-dark)}
+
+  .card-tag{display:inline-flex;align-items:center;gap:.25rem;padding:.15rem .4rem;font-size:.68rem;font-weight:600;border-radius:9999px;background:rgba(243,244,246,0.9);color:#111827;border:1px solid rgba(15,23,42,0.04);white-space:nowrap;}
+  .card-tag svg{opacity:.9;margin-right:0.15rem;flex-shrink:0;}
+  .dark .card-tag{background:rgba(255,255,255,0.04);color:var(--text-primary-dark);border:1px solid rgba(255,255,255,0.06);box-shadow:inset 0 -1px 0 rgba(0,0,0,0.2)}
+
+  /* Slightly tighter tag spacing when used inside card grids */
+  .card-tag+.card-tag{margin-left:0.35rem}
+
+  /* Hero variant for tags that sit on top of images (keeps white text and subtle blur) */
+  .card-tag-hero{background:rgba(255,255,255,0.08);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);color:rgba(255,255,255,0.95);border:1px solid rgba(255,255,255,0.12);font-weight:600}
+  .card-tag-hero svg{opacity:0.95}
+  .dark .card-tag-hero{background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.95);border:1px solid rgba(255,255,255,0.12)}
+
+  /* Images and decorative elements */
+  .mobile-card img{width:100%!important;height:auto!important;object-fit:cover!important}
+  .mobile-card .absolute.w-40.h-40,.mobile-card .absolute.w-24.h-24{width:3.25rem!important;height:3.25rem!important;opacity:.9!important}
+}
+
+/* Tighten paddings for smaller phones */
+@media (max-width:480px){
+  header[class*="fixed"]{min-height:76px}
+  .hero-section{padding-top:5rem!important;min-height:calc(100dvh - 3.5rem)!important;height:auto!important}
+  /* Keep consistent with larger mobile - use px-4 from Tailwind */
+  .mobile-card{border-radius:.75rem!important}
+
+  /* Even tighter blog content on small phones */
+  /* Handled by Tailwind classes */
+  
+  /* Ensure hero container has enough space on small phones */
+  .h-\[calc\(100dvh-5\.5rem\)\] {
+    height: auto !important;
+    min-height: calc(100dvh - 3.5rem) !important;
+  }
+}
+
+/* Enhanced professional transitions and dark mode overlay fixes */
+@media (max-width: 768px) {
+  /* Smooth mobile transitions - prevent jarring animations */
+  .mobile-smooth-transition {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+  }
+  
+  /* Enhanced touch targets for mobile */
+  .touch-target {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  
+  /* Professional overlay fixes for dark mode */
+  .dark .bg-gradient-to-r {
+    --tw-gradient-from: transparent;
+    --tw-gradient-to: transparent;
+    --tw-gradient-stops: var(--tw-gradient-from), rgba(75, 85, 99, 0.1) 50%, var(--tw-gradient-to);
+  }
+  
+  /* Smooth scroll-triggered animations */
+  .scroll-fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  .scroll-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Project card mobile improvements */
+  .mobile-card .card-description {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+  
+  .mobile-card .card-tag {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+    gap: 0.2rem;
+  }
+  
+  .mobile-card .card-tag svg {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* Project grid mobile adjustments */
+  .mobile-grid-single {
+    gap: 1rem !important;
+  }
+  
+  /* Category badges mobile sizing */
+  .mobile-card .absolute.top-4.left-4 {
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .mobile-card .absolute.top-4.right-4 {
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  /* Search and filter mobile improvements */
+  .mobile-card-container input,
+  .mobile-card-container select {
+    font-size: 1rem; /* Prevent iOS zoom */
+  }
+  
+  /* Profile card mobile optimizations */
+  .mobile-card-optimized {
+    width: 100% !important;
+    max-width: 280px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Fix hero section height on mobile to prevent card cutoff */
+  .hero-section {
+    min-height: auto !important;
+    height: auto !important;
+  }
+  
+  /* Hero container adjustments for mobile — allow content to grow */
+  .h-\[calc\(100dvh-5\.5rem\)\] {
+    height: auto !important;
+    min-height: calc(100dvh - 4rem) !important;
+  }
+}
+
+@media (max-width:320px){
+  header[class*="fixed"]{min-height:80px}
+  .hero-section{padding-top:5.5rem!important;min-height:calc(100dvh - 3rem)!important;height:auto!important}
+  /* Keep consistent horizontal padding with larger screens */
+  .mobile-card{border-radius:.5rem!important}
+  
+  /* Profile card on very small screens - more compact but visible */
+  .mobile-card-optimized {
+    max-width: 260px !important;
+    padding: 1rem !important;
+  }
+  
+  /* Ensure hero container has enough space */
+  .h-\[calc\(100dvh-5\.5rem\)\] {
+    height: auto !important;
+    min-height: calc(100dvh - 3rem) !important;
+  }
+  
+  /* Blog articles on very small screens */
+  article .bg-white, article .dark\:bg-gray-800{padding:0.75rem 0.25rem!important}
+}
+
+/* Medium-mobile: 480–640 special case for 2-column mobile-grid-double */
+@media (min-width:480px) and (max-width:640px){
+  .mobile-grid-double{grid-template-columns:1fr 1fr!important;gap:.75rem!important}
+}
+
+/* Small-screen typography helpers */
+@media (max-width:640px){.text-responsive{font-size:clamp(.875rem,4vw,1.125rem);line-height:1.5}.heading-responsive{font-size:clamp(1.5rem,8vw,2.5rem);line-height:1.2}}
+
+/* Reading mode — CSS custom properties propagate down the whole tree, bypassing the
+   cascade fight between explicit Tailwind classes (text-base, leading-7, sm:text-lg, etc.)
+   and inherited values. var() with !important beats every non-!important Tailwind rule. */
+.reading-mode-active p,
+.reading-mode-active li,
+.reading-mode-active article p,
+.reading-mode-active article li {
+  font-size: var(--rm-font-size, 1rem) !important;
+  line-height: var(--rm-line-height, 1.75) !important;
+}
+.reading-mode-active h1,
+.reading-mode-active h2,
+.reading-mode-active h3,
+.reading-mode-active h4,
+.reading-mode-active article h1,
+.reading-mode-active article h2,
+.reading-mode-active article h3,
+.reading-mode-active article h4 {
+  font-family: inherit !important;
+}
+/* Keep code blocks at a sensible relative size regardless of reading font-size */
+.reading-mode-active pre,
+.reading-mode-active code[class*="language-"],
+.reading-mode-active article pre,
+.reading-mode-active article code[class*="language-"],
+.reading-mode-active code:not([class*="language-"]) {
+  font-size: calc(var(--rm-font-size, 16px) * 0.85) !important;
+  line-height: 1.5 !important;
+}
+
+/* Scale Mermaid diagrams proportionally in reading mode */
+.reading-mode-active .mermaid-diagram .node text,
+.reading-mode-active .mermaid-diagram .edgeLabel,
+.reading-mode-active .mermaid-diagram .messageText,
+.reading-mode-active .mermaid-diagram .mermaid-gantt-title {
+  font-size: calc(var(--rm-font-size, 16px) * 0.75) !important;
+}
+
+/* Content helpers */
+.mobile-content-wide{max-width:100%!important;padding-left:.5rem!important;padding-right:.5rem!important}
+.mobile-hero-optimized{padding-left:.75rem!important;padding-right:.75rem!important}
+
+/* --------------------------------------------------------------------------
+   Mermaid Diagram Styles
+   Blue-slate identity: nodes use the site's blue palette, not flat grays.
+   Contrast comes from color hierarchy, not heavy borders or shadows.
+   ----------------------------------------------------------------------- */
+
+/* Base diagram container — min-width lets the inner SVG expand naturally
+   while the overflow-x-auto ancestor handles scrolling for wide diagrams. */
+.mermaid-diagram {
+  min-width: fit-content;
+}
+
+.mermaid-diagram svg {
+  max-width: 100%;
+  height: auto;
+  font-family: 'Inter', system-ui, sans-serif !important;
+  display: block;
+}
+
+/* Node borders: 1.5px gives definition without feeling heavy */
+.mermaid-diagram .node rect,
+.mermaid-diagram .node circle,
+.mermaid-diagram .node ellipse,
+.mermaid-diagram .node polygon,
+.mermaid-diagram .node path {
+  stroke-width: 1.5px;
+  transition: filter 0.15s ease;
+}
+
+/* Subtle hover brightening so nodes feel interactive */
+.mermaid-diagram .node:hover rect,
+.mermaid-diagram .node:hover circle,
+.mermaid-diagram .node:hover ellipse,
+.mermaid-diagram .node:hover polygon,
+.mermaid-diagram .node:hover path {
+  filter: brightness(1.08);
+}
+
+/* Cluster/subgraph: rounded corners + slightly thicker stroke = clear grouping */
+.mermaid-diagram .cluster rect {
+  stroke-width: 1.5px;
+  rx: 10px;
+  ry: 10px;
+}
+
+/* Arrows/edges: match the blue lineColor set in themeVariables */
+.mermaid-diagram .edgePath path,
+.mermaid-diagram .flowchart-link {
+  stroke-width: 1.5px;
+}
+
+/* Arrowhead markers inherit edge color automatically */
+.mermaid-diagram marker path {
+  stroke-width: 1px;
+}
+
+/* Edge labels: slightly bolder text for legibility */
+.mermaid-diagram .edgeLabel {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Edge label rectangles: rounded, matching themeVariables edgeLabelBackground */
+.mermaid-diagram .edgeLabel rect {
+  rx: 4px;
+  ry: 4px;
+}
+
+/* HTML labels (used for <br/> line breaks) */
+.mermaid-diagram .label {
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Sequence diagram: actors and messages share the blue identity */
+.mermaid-diagram .actor {
+  stroke-width: 1.5px;
+}
+
+.mermaid-diagram .messageText {
+  font-size: 13px;
+}
+
+/* Gantt chart */
+.mermaid-diagram .mermaid-gantt-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Fullscreen diagram — no width constraint, sharp vector rendering at any scale */
+.mermaid-diagram-fullscreen svg {
+  max-width: none;
+  width: auto;
+  height: auto;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+  /* Avoid GPU rasterization at initial size (which blurs when CSS-scaled) */
+  will-change: auto;
+}
+
+/* Mobile optimizations for diagrams.
+   We intentionally do NOT set a min-width on the SVG here — forcing a minimum
+   width caused simple diagrams to scroll unnecessarily. Wide diagrams already
+   scroll via the overflow-x-auto wrapper. Font sizes are reduced slightly on
+   small screens to keep complex diagrams legible. */
+@media (max-width: 768px) {
+  .mermaid-diagram {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .mermaid-diagram .node text,
+  .mermaid-diagram .edgeLabel {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .mermaid-diagram .node text,
+  .mermaid-diagram .edgeLabel {
+    font-size: 10px !important;
+  }
+}
+
+/* Custom scrollbar for diagram container */
+.mermaid-diagram::-webkit-scrollbar {
+  height: 6px;
+}
+
+.mermaid-diagram::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.mermaid-diagram::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+.dark .mermaid-diagram::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+.mermaid-diagram::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+.dark .mermaid-diagram::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+/* --------------------------------------------------------------------------
+   Table of Contents highlight effect
+   Applied when navigating to a heading via the TOC
+   ----------------------------------------------------------------------- */
+.toc-highlight {
+  background-color: rgba(59, 130, 246, 0.08);
+  border-radius: 0.25rem;
+  transition: background-color 1.5s ease;
+}
+
+.dark .toc-highlight {
+  background-color: rgba(59, 130, 246, 0.12);
+}
