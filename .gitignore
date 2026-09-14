@@ -110,5 +110,3 @@ pnpm-lock.yaml
 .serverless
 
 **/.claude/
-
-front/public/blog/
