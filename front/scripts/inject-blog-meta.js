@@ -32,7 +32,7 @@ try {
   // dotenv optional
 }
 
-const SITE_URL = (process.env.SITE_URL || 'https://juanlara18.github.io/portfolio').replace(/\/$/, '');
+const SITE_URL = (process.env.SITE_URL || 'https://edserranoc.github.io/portfolio').replace(/\/$/, '');
 const DEFAULT_IMAGE = `${SITE_URL}/portfolio.png`;
 
 function escapeHtmlAttr(s) {

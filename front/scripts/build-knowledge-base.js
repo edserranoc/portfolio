@@ -9,7 +9,7 @@ const KB_DIR = path.join(__dirname, '..', '..', 'knowledge-base');
 const KB_MD = path.join(KB_DIR, 'KNOWLEDGE_BASE.md');
 const KB_JSON = path.join(KB_DIR, 'posts.json');
 
-const SITE_BASE = 'https://juanlara18.github.io/portfolio';
+const SITE_BASE = 'https://edserranoc.github.io/portfolio';
 
 function depthFromWordCount(wc) {
   if (!wc || wc < 1500) return 'intro';

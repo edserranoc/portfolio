@@ -22,7 +22,7 @@ try {
   // dotenv optional
 }
 
-const SITE_URL = (process.env.SITE_URL || 'https://juanlara18.github.io/portfolio').replace(/\/$/, '');
+const SITE_URL = (process.env.SITE_URL || 'https://edserranoc.github.io/portfolio').replace(/\/$/, '');
 const FEED_URL = `${SITE_URL}/rss.xml`;
 const SITE_NAME = 'Juan Lara — Writing';
 const SITE_DESC = 'Technical writing on machine learning, AI agents, NLP, and data engineering — research notes, field notes, and curiosities.';

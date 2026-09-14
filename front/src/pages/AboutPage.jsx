@@ -424,7 +424,7 @@ const courses = [
       <SEO
         title="About · Edison Serrano"
         description="Data Scientist with expertise in machine learning, data analysis, and statistical modeling. Passionate about extracting insights from complex datasets to drive business decisions."
-        canonical="https://juanlara18.github.io/portfolio/#/about"
+        canonical="https://edserranoc.github.io/portfolio/#/about"
         keywords={[
           'Edison Serrano',
           'Data Scientist',

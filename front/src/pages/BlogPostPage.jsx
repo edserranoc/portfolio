@@ -830,8 +830,8 @@ export default function BlogPostPage() {
       <SEO
         title={`${post.title} · Juan Lara`}
         description={post.excerpt || post.description || `Read about ${post.title}. A deep dive into ${post.category}.`}
-        canonical={`https://juanlara18.github.io/portfolio/blog/${post.category}/${post.slug}`}
-        image={headerImage.startsWith('http') ? headerImage : `https://juanlara18.github.io${headerImage}`}
+        canonical={`https://edserranoc.github.io/portfolio/blog/${post.category}/${post.slug}`}
+        image={headerImage.startsWith('http') ? headerImage : `https://edserranoc.github.io${headerImage}`}
         type="article"
         keywords={post.tags || [post.category, 'machine learning', 'AI', 'computer science']}
         article={{
@@ -845,10 +845,10 @@ export default function BlogPostPage() {
           audioDurationSec: post.audio?.en?.durationSec,
         }}
         breadcrumbs={[
-          { name: 'Home', url: 'https://juanlara18.github.io/portfolio/' },
-          { name: 'Writing', url: 'https://juanlara18.github.io/portfolio/blog' },
-          { name: categoryConfig?.name || post.category, url: `https://juanlara18.github.io/portfolio/blog/category/${post.category}` },
-          { name: post.title, url: `https://juanlara18.github.io/portfolio/blog/${post.category}/${post.slug}` },
+          { name: 'Home', url: 'https://edserranoc.github.io/portfolio/' },
+          { name: 'Writing', url: 'https://edserranoc.github.io/portfolio/blog' },
+          { name: categoryConfig?.name || post.category, url: `https://edserranoc.github.io/portfolio/blog/category/${post.category}` },
+          { name: post.title, url: `https://edserranoc.github.io/portfolio/blog/${post.category}/${post.slug}` },
         ]}
       />
       

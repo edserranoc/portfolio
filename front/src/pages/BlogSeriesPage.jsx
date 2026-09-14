@@ -42,7 +42,7 @@ const postToMarkdown = (post) => {
     `date: ${JSON.stringify(post.date || '')}`,
     `category: ${post.category || ''}`,
     `slug: ${post.slug || ''}`,
-    `url: https://juanlara18.github.io/portfolio/#/blog/${post.slug || ''}`,
+    `url: https://edserranoc.github.io/portfolio/#/blog/${post.slug || ''}`,
     '---',
     '',
     '',
@@ -376,10 +376,10 @@ export default function BlogSeriesPage() {
       <SEO
         title="Reading Series · Juan Lara"
         description="Curated, multi-part reading series from the blog — ordered arcs on RAG, agents, graph engineering, knowledge systems, ML fundamentals, data engineering, and more."
-        canonical="https://juanlara18.github.io/portfolio/#/blog/series"
+        canonical="https://edserranoc.github.io/portfolio/#/blog/series"
         breadcrumbs={[
-          { name: 'Blog', url: 'https://juanlara18.github.io/portfolio/#/blog' },
-          { name: 'Reading Series', url: 'https://juanlara18.github.io/portfolio/#/blog/series' },
+          { name: 'Blog', url: 'https://edserranoc.github.io/portfolio/#/blog' },
+          { name: 'Reading Series', url: 'https://edserranoc.github.io/portfolio/#/blog/series' },
         ]}
       />
 
