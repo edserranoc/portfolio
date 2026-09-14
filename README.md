@@ -1,26 +1,6 @@
-<<<<<<< HEAD
-# Portfolio
-Personal portfolio &amp; technical blog 
-=======
+# Personal portfolio  technical blog
+
 <div align="center">
-
-# Juan Lara — Portfolio & Blog
-
-**Senior AI Engineer · Production AI · Knowledge Systems**
-
-State-of-the-art AI, engineered for production.
-
-[![Live Site](https://img.shields.io/badge/Live_Site-juanlara18.github.io%2Fportfolio-6d28d9?style=flat-square&logo=github-pages&logoColor=white)](https://juanlara18.github.io/portfolio)
-[![License](https://img.shields.io/badge/License-MIT-gray?style=flat-square)](LICENSE)
-[![Deploy](https://img.shields.io/github/actions/workflow/status/JuanLara18/portfolio/deploy.yml?style=flat-square&label=Deploy&logo=github-actions&logoColor=white)](https://github.com/JuanLara18/portfolio/actions)
-
-[larajuand@outlook.com](mailto:larajuand@outlook.com) · [LinkedIn](https://www.linkedin.com/in/julara/)
-
-<br/>
-
-<img src=".github/assets/preview.png" alt="Juan Lara Portfolio" width="100%" style="border-radius: 8px;" />
-
-</div>
 
 ---
 
@@ -28,13 +8,13 @@ Personal site and engineering notebook for production AI. Field notes on RAG, ag
 
 ## Stack
 
-| Layer | Tech |
-|---|---|
-| Frontend | React 18, React Router 6 |
-| Styling | Tailwind CSS, Framer Motion |
-| Blog engine | react-markdown · remark-math · KaTeX · Mermaid |
-| Audio | edge-tts (EN/ES voices) · Ollama + gemma4 for ES translation |
-| Deploy | GitHub Actions → GitHub Pages |
+| Layer       | Tech                                                          |
+| ----------- | ------------------------------------------------------------- |
+| Frontend    | React 18, React Router 6                                      |
+| Styling     | Tailwind CSS, Framer Motion                                   |
+| Blog engine | react-markdown · remark-math · KaTeX · Mermaid             |
+| Audio       | edge-tts (EN/ES voices) · Ollama + gemma4 for ES translation |
+| Deploy      | GitHub Actions → GitHub Pages                                |
 
 ## Writing
 
@@ -93,4 +73,11 @@ agents consume them.
 ## License
 
 MIT — see [LICENSE](LICENSE)
+
 >>>>>>> 4835845 (Uploading the first portfolio draft: 'About Me' and 'Projects' sections.)
+>>>>>>>
+>>>>>>
+>>>>>
+>>>>
+>>>
+>>
