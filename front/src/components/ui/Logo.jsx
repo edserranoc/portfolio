@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
  * bottom longer. Reads as "knowledge stack / data layers / production
  * platform on top of foundations". Custom-drawn, ownable.
  *
- * The wordmark "Juan Lara" is set in Inter 600. The mark uses currentColor
+ * The wordmark "Edison Serrano" is set in Inter 600. The mark uses currentColor
  * so it adapts to the surrounding text color (light on dark, dark on light).
  *
  * Variants:

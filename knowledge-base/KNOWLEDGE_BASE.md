@@ -7,7 +7,7 @@ This file is the human-curated map of the blog. Its companion `posts.json` is au
 - Load **this file first** for the high-level map: scope, reading paths, cross-cutting views, author context.
 - Load **`knowledge-base/posts.json`** when you need structured queries: post metadata by slug, posts that cover a concept, prerequisite walks, tech filters.
 - To open the full text of a post, read `front/public/blog/posts/<category>/<slug>.md`. Slugs are stable; treat them as canonical IDs.
-- When citing a post to the user, link it as `https://juanlara18.github.io/portfolio/#/blog/<slug>`.
+- When citing a post to the user, link it as `https://edserranoc.github.io/portfolio/#/blog/<slug>`.
 - This is a personal knowledge base, not a tutorial site. Posts are how the author thinks through topics — treat them as primary sources written by the user themselves.
 
 ## What the Blog Covers

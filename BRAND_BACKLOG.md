@@ -1,4 +1,4 @@
-# Brand Backlog — Juan Lara
+# Brand Backlog — Edison Serrano
 
 Persistent backlog for personal brand work. We work through this across sessions.
 
@@ -6,7 +6,7 @@ Persistent backlog for personal brand work. We work through this across sessions
 
 ## 0. Locked positioning
 
-**Identity:** Senior AI Engineer who takes state-of-the-art AI research to production-grade systems at enterprise scale.
+**Identity:** Data Scientist who turns complex data into clear, useful decisions.
 
 **Hierarchy of what the brand projects:**
 
@@ -46,14 +46,14 @@ The verbal layer is now the single source of truth for every later application.
 
 ### EPIC 2 — Visual identity system `P1`
 
-- [ ] **2.1** Decide logo evolution: keep current "jL" icon as avatar/favicon-only; design a **wordmark** "Juan Lara" in the existing serif. Lockup variants: full / compact / icon-only.
+- [ ] **2.1** Decide logo evolution: keep current "jL" icon as avatar/favicon-only; design a **wordmark** "Edison Serrano" in the existing serif. Lockup variants: full / compact / icon-only.
 - [ ] **2.2** Color system cleanup: lock **2 functional colors** (primary blue + one accent). Demote multi-color chip system on home. Keep blog-category colors as the only place colors signal taxonomy.
 - [ ] **2.3** Typography scale formalized in a single file (`STYLE.md` or Tailwind tokens): display serif, body sans, mono for technical taglines.
 - [ ] **2.4** Blog header template: standardized "type-poster" (navy + grafo + serif title + mono category tag). Goal: instant recognition in LinkedIn shares.
 - [ ] **2.5** Profile photo direction: brief for a single, neutral, B&W or low-saturation portrait. To replace current `Profile.jpeg`.
 - [ ] **2.6** Drop generic "blob" decorations from hero in favor of the grafo/network motif (already aligned with knowledge-systems story).
 
-### EPIC 3 — Portfolio site (juanlara18.github.io/portfolio) `P1` 🟡 PARTIAL 2026-05-01
+### EPIC 3 — Portfolio site (edserranoc.github.io/portfolio) `P1` 🟡 PARTIAL 2026-05-01
 
 **Status:** Verbal layer applied to all primary surfaces (home, about, footer, mobile menu, SEO defaults, index.html, manifest.json, README). Apple-style cadence applied. Visual system, "Now" section, and case studies remain.
 

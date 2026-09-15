@@ -47,7 +47,7 @@ const TypingTerminal = ({ text }) => {
         <div className="w-3 h-3 rounded-full bg-red-500" />
         <div className="w-3 h-3 rounded-full bg-yellow-500" />
         <div className="w-3 h-3 rounded-full bg-green-500" />
-        <span className="ml-2 text-gray-400 text-sm">juan@lara ~ terminal</span>
+        <span className="ml-2 text-gray-400 text-sm">edison@serrano ~ terminal</span>
       </div>
       <div className="flex h-full">
         <motion.span 

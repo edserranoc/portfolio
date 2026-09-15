@@ -1,4 +1,4 @@
-# Juan Lara — Brand Book
+# Edison Serrano — Brand Book
 
 Canonical source of truth for the verbal layer of the personal brand. Every external surface (portfolio, LinkedIn, GitHub, talks, podcasts, email signatures, slide decks) draws from this document. When in doubt, this file wins.
 
@@ -49,7 +49,7 @@ Canonical source of truth for the verbal layer of the personal brand. Every exte
 | Home hero (large) | Primary tagline |
 | About hero | Strap-line above name, primary tagline below |
 | LinkedIn headline | `AI Engineer · Production AI at Davivienda · I take SOTA to production` (or current employer) |
-| Email signature, slide footer | `Juan Lara — State-of-the-art AI, engineered for production.` |
+| Email signature, slide footer | `Edison Serrano — Data science, grounded in evidence.` |
 | Speaker tagline (1 line on a slide) | Primary tagline |
 | Talk-submission speaker bio | Sub-tagline + 100-word bio |
 
@@ -132,7 +132,7 @@ These pillar names are reused verbatim across the home "Why Work With Me" sectio
 
 ## 5. Anchor topics
 
-The six things the brand wants Juan to be known for. Each maps to (a) a potential talk topic, (b) a potential blog series, (c) a specialization claim usable in bios.
+The six things the brand wants Edison to be known for. Each maps to (a) a potential talk topic, (b) a potential blog series, (c) a specialization claim usable in bios.
 
 | # | Topic | Specialization claim | Example talk title | Example blog series title |
 |---|---|---|---|---|
@@ -198,7 +198,7 @@ Browser tab titles get truncated to ~30 characters at typical widths. Two compet
 
 - **One separator only.** Prefer `·` (middle dot) for editorial tone. Apple uses it across apple.com nav.
 - **Front-load the identity.** Brand name first, role second. The truncated form should still identify the page.
-- **Keep under 32 characters when possible.** SEO weight lives in the meta description, not the title. *"Juan Lara · AI Engineer"* (23 chars) beats *"Juan Lara | AI Engineer — Production AI at Enterprise Scale"* (60 chars, truncates to nonsense).
+- **Keep under 32 characters when possible.** SEO weight lives in the meta description, not the title. *"Edison Serrano · Data Scientist"* identifies the site clearly and keeps the role visible.
 
 ### 6.6. Before / after table
 
@@ -208,7 +208,7 @@ Real strings from the current repo, with their replacement:
 |---|---|---|
 | Home hero strap (two-line) | "Bridging the gap from research to scalable production" | "Frontier AI." / "Engineered for production." |
 | Home hero body | "I transform complex mathematical models and AI research into robust, enterprise-grade applications. Specializing in autonomous agents, distributed systems, and driving measurable business impact through scalable ML engineering." | "RAG & GraphRAG. Agentic architectures. Knowledge systems. Built for regulated industries. Currently at Davivienda." |
-| Tab title | "Juan Lara \| AI Engineer — Research to Production" (66 chars, truncates ambiguously) | "Juan Lara · AI Engineer" (23 chars, single separator) |
+| Tab title | "Edison Serrano \| Data Scientist" | "Edison Serrano · Data Scientist" |
 | Home hero chips | Autonomous Agents · Distributed Systems · Enterprise MLOps · Scalable Architecture | RAG & GraphRAG · Agentic Architectures · Knowledge Systems · LLM Ops |
 | Home pillar — Production AI Systems | (was "Applied Research" copy) "Translating SOTA mathematical models and papers into practical algorithms that solve complex problems." | "Production AI, shipped. RAG, agents, and knowledge applications in users' hands." |
 | Home pillar — Engineering Practice | (was "Scalable Engineering" copy) "Building robust data pipelines, optimizing inference latency, and deploying ML systems on the cloud." | "From notebook to running system. Architecture, evaluation, and ops at scale." |

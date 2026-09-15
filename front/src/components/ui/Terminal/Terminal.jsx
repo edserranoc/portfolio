@@ -128,7 +128,7 @@ const TypingTerminalAdvanced = ({ text = "Welcome to the enhanced terminal exper
              style={{boxShadow: '0 0 8px rgba(251, 191, 36, 0.4)'}} />
         <div className="w-3 h-3 rounded-full bg-green-500 hover:bg-green-400 transition-all duration-200 cursor-pointer shadow-lg"
              style={{boxShadow: '0 0 8px rgba(34, 197, 94, 0.4)'}} />
-        <span className="ml-2 text-gray-400 text-sm font-medium">juan@lara ~ terminal</span>
+        <span className="ml-2 text-gray-400 text-sm font-medium">edison@serrano ~ terminal</span>
         
         {/* Status indicator */}
         <div className="ml-auto flex items-center gap-2 text-xs">

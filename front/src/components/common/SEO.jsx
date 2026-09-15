@@ -22,7 +22,7 @@ const PERSON_SCHEMA = {
   jobTitle: 'Data Scientist',
   affiliation: {
     '@type': 'Organization',
-    name: 'Davivienda',
+    name: 'Independent',
   },
   sameAs: SAME_AS,
 };
@@ -54,7 +54,7 @@ const PUBLISHER_SCHEMA = {
  * @param {string} [props.image] - Absolute image URL (OG + schema)
  * @param {'website'|'article'} [props.type='website']
  * @param {Array<string>} [props.keywords]
- * @param {string} [props.author='Juan Lara']
+ * @param {string} [props.author='Edison Serrano']
  * @param {Object} [props.article] - Article-specific metadata
  * @param {string} props.article.publishedDate
  * @param {string} [props.article.modifiedDate]
@@ -218,12 +218,9 @@ export const defaultSEO = {
   keywords: [
     'Edison Serrano',
     'Data Scientist',
-    'Production AI',
-    'RAG',
-    'GraphRAG',
-    'Agentic Architectures',
-    'Knowledge Systems',
-    'LLM Ops',
+    'Machine Learning',
+    'Data Analysis',
+    'Statistical Modeling',
     'Knowledge Data Engineer',
     'Machine Learning',
     'Google ADK',

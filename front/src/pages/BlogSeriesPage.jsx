@@ -374,7 +374,7 @@ export default function BlogSeriesPage() {
   return (
     <>
       <SEO
-        title="Reading Series · Juan Lara"
+        title="Reading Series · Edison Serrano"
         description="Curated, multi-part reading series from the blog — ordered arcs on RAG, agents, graph engineering, knowledge systems, ML fundamentals, data engineering, and more."
         canonical="https://edserranoc.github.io/portfolio/#/blog/series"
         breadcrumbs={[

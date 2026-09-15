@@ -8,10 +8,10 @@
 // Two sentences, one per line in hero rendering. Period cadence,
 // no hyphens. Apple-style ("Pro. Beyond." / "Think different.").
 // In prose contexts (bios), use the comma form: "Frontier AI, engineered for production."
-export const TAGLINE = "Frontier AI. Engineered for production.";
+export const TAGLINE = "Data science. Grounded in evidence.";
 
 // Sub-tagline. Different vocabulary so it adds claim instead of repeating.
-export const SUB_TAGLINE = "From research to enterprise scale.";
+export const SUB_TAGLINE = "From data to decisions.";
 
 export const ROLE = "Data Scientist";
 
@@ -20,41 +20,33 @@ export const STRAP_LINE = "Data Scientist · Applied Mathematician · Scientific
 // Short bio. For Twitter/X, GitHub header, talk speaker tagline. ~30 words.
 // "Frontier" lives in the tagline only — bios show facts, not adjectives.
 export const BIO_50 =
-  "AI Engineer building production AI since 2022. " +
-  "Banking, retail logistics, healthcare AI, academic research. " +
-  "Currently at Davivienda. Previously: Falabella, GenomAI, Harvard.";
+  "Data Scientist working across machine learning, data analysis, and statistical modeling. " +
+  "Focused on turning complex datasets into clear, useful decisions.";
 
 // Medium bio. For LinkedIn short form, conference speaker bio.
 export const BIO_100 =
-  "AI Engineer building production AI at enterprise scale since 2022.\n\n" +
-  "Currently leading the knowledge-base cell of Davivienda's AI-First strategy, " +
-  "building the semantic layer that grounds the bank's AI agents in verifiable, " +
-  "traceable business context. Previously: ML for logistics at Falabella, compliance-grade " +
-  "generative AI at GenomAI, research engineering at Harvard.\n\n" +
-  "My focus is what production demands that papers omit. Scale. Governance. " +
-  "Evaluation. The engineering decisions between a working prototype and a system " +
-  "you can run.";
+  "Data Scientist focused on machine learning, data analysis, and statistical modeling.\n\n" +
+  "I work with complex datasets to identify patterns, build reliable models, and " +
+  "turn analysis into decisions that people can act on.\n\n" +
+  "My focus is the work between raw data and useful outcomes: clear questions, " +
+  "careful measurement, reproducible analysis, and models that support real decisions.";
 
 // Long bio. For /about, full LinkedIn About, full conference bio.
 export const BIO_200 =
-  "AI Engineer building production AI at enterprise scale since 2022.\n\n" +
-  "Currently I lead the knowledge-base cell of Davivienda's AI-First strategy, " +
-  "building the semantic layer that grounds the bank's AI agents in verifiable, " +
-  "traceable, and governed business context. Before that: ML for logistics at Falabella " +
-  "(a distribution center moving ~4.6M SKUs), compliance-grade generative AI in " +
-  "healthcare at GenomAI, and three years of research engineering at Harvard " +
-  "University.\n\n" +
-  "My focus is the engineering layer between ML research and enterprise systems. " +
-  "Retrieval platforms, from RAG to GraphRAG. Agentic architectures. Knowledge-grounded " +
-  "LLM applications. The data foundations that make them reliable.\n\n" +
-  "Computer Science + Mathematics dual degree, 4.7/5.0. M.Sc. in Artificial " +
-  "Intelligence in progress at Universidad de los Andes. Open to talks, technical " +
-  "engagements, and collaborations on production AI systems.";
+  "Data Scientist focused on machine learning, data analysis, and statistical modeling.\n\n" +
+  "I turn complex datasets into structured evidence for better decisions. My work " +
+  "spans data preparation, exploratory analysis, model development, evaluation, and " +
+  "the communication required to make technical findings useful.\n\n" +
+  "I care about the full path from question to answer: defining the problem clearly, " +
+  "choosing methods that fit the evidence, validating assumptions, and building " +
+  "analysis that can be understood and reproduced.\n\n" +
+  "Open to analytical projects, research collaborations, and opportunities to build " +
+  "data products that make complex information easier to use.";
 
 // Hero body. List-of-three then context. Apple period cadence, no em-dashes.
 export const HERO_BODY =
-  "RAG & GraphRAG. Agentic architectures. Knowledge systems. " +
-  "Built for regulated industries. Currently at Davivienda.";
+  "Machine learning. Statistical modeling. Data analysis. " +
+  "Evidence for better decisions.";
 
 // Three content pillars. Order enforces the 70/25/5 hierarchy.
 // `color` is a Tailwind palette key consumed by existing components.
@@ -183,14 +175,13 @@ export const FORBIDDEN_PHRASES = [
 
 // Footer / contact blurb.
 export const FOOTER_CONNECT_BLURB =
-  "Open to talks, technical engagements, and collaborations on production AI systems.";
+  "Open to analytical projects, research collaborations, and data-focused work.";
 
 // Default SEO description. No em-dashes; periods for cadence.
 export const SEO_DEFAULT_DESCRIPTION =
-  "AI Engineer building production AI systems at enterprise scale. Knowledge systems " +
-  "for AI agents in banking, RAG and GraphRAG platforms, agentic architectures. " +
-  "Currently leading the knowledge-base cell of Davivienda's AI-First strategy.";
+  "Data Scientist focused on machine learning, data analysis, and statistical modeling. " +
+  "Turning complex datasets into clear, useful decisions.";
 
 // Default SEO title. Single separator (middle dot). Tab-truncation safe.
-// Stays readable when truncated to "Juan Lara · AI Engineer".
-export const SEO_DEFAULT_TITLE = "Juan Lara · AI Engineer";
+// Stays readable when truncated to "Edison Serrano · Data Scientist".
+export const SEO_DEFAULT_TITLE = "Edison Serrano · Data Scientist";

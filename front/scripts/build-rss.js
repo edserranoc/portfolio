@@ -24,7 +24,7 @@ try {
 
 const SITE_URL = (process.env.SITE_URL || 'https://edserranoc.github.io/portfolio').replace(/\/$/, '');
 const FEED_URL = `${SITE_URL}/rss.xml`;
-const SITE_NAME = 'Juan Lara — Writing';
+const SITE_NAME = 'Edison Serrano — Writing';
 const SITE_DESC = 'Technical writing on machine learning, AI agents, NLP, and data engineering — research notes, field notes, and curiosities.';
 
 function escapeXml(s) {
@@ -75,7 +75,7 @@ function itemXml(post) {
     `    <description>${desc}</description>`,
     categories,
     enclosure,
-    `    <dc:creator>Juan Lara</dc:creator>`,
+    `    <dc:creator>Edison Serrano</dc:creator>`,
     '  </item>',
   ].filter(Boolean).join('\n');
 }

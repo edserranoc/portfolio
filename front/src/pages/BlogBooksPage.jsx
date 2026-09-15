@@ -204,7 +204,7 @@ export default function BlogBooksPage() {
   return (
     <>
       <SEO
-        title="Books & Papers · Juan Lara"
+        title="Books & Papers · Edison Serrano"
         description="Every book and academic paper cited across the blog, ranked by how many posts reference it — the recurring canonical sources behind the writing."
         canonical="https://edserranoc.github.io/portfolio/#/blog/books"
         breadcrumbs={[

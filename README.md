@@ -30,7 +30,7 @@ Personal site and engineering notebook for production AI. Field notes on RAG, ag
 ## Run locally
 
 ```bash
-git clone https://github.com/JuanLara18/portfolio.git
+git clone https://github.com/edserranoc/portfolio.git
 cd portfolio/front
 npm install
 npm start
@@ -73,11 +73,3 @@ agents consume them.
 ## License
 
 MIT — see [LICENSE](LICENSE)
-
->>>>>>> 4835845 (Uploading the first portfolio draft: 'About Me' and 'Projects' sections.)
->>>>>>>
->>>>>>
->>>>>
->>>>
->>>
->>

@@ -166,7 +166,7 @@ export default function BlogHomePage() {
   return (
     <>
       <SEO
-        title="Blog | Juan Lara"
+        title="Blog | Edison Serrano"
         description="Technical articles about AI, machine learning, NLP, and computer science. Deep dives into research papers, curiosities, and practical ML engineering."
         canonical="https://edserranoc.github.io/portfolio/#/blog"
         keywords={[

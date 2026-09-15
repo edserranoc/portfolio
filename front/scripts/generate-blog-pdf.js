@@ -1557,7 +1557,7 @@ function addCover(doc, posts, _totalCats) {
   doc.restore();
 
   doc.font(F.B).fontSize(14).fillColor('#e2e8f0')
-    .text('Juan Lara', M.left, ruleY + 14, { width: titleW, lineBreak: false });
+    .text('Edison Serrano', M.left, ruleY + 14, { width: titleW, lineBreak: false });
 
   // ── Bottom edition marker — tiny, muted, unobtrusive ──
   const bottomY = ph - M.bottom - 6;
@@ -1822,8 +1822,8 @@ async function main() {
     size: 'A4',
     margins: M,
     info: {
-      Title: 'Blog Compilation — Juan Lara',
-      Author: 'Juan Lara',
+      Title: 'Blog Compilation — Edison Serrano',
+      Author: 'Edison Serrano',
       Subject: 'Technical blog posts compilation',
       Creator: 'generate-blog-pdf.js',
     },

@@ -828,7 +828,7 @@ export default function BlogPostPage() {
   return (
     <>
       <SEO
-        title={`${post.title} · Juan Lara`}
+        title={`${post.title} · Edison Serrano`}
         description={post.excerpt || post.description || `Read about ${post.title}. A deep dive into ${post.category}.`}
         canonical={`https://edserranoc.github.io/portfolio/blog/${post.category}/${post.slug}`}
         image={headerImage.startsWith('http') ? headerImage : `https://edserranoc.github.io${headerImage}`}

@@ -41,19 +41,16 @@ export default function LandingPage() {
   return (
     <>
       <SEO
-        title="Juan Lara · AI Engineer"
-        description="AI Engineer building production AI systems at enterprise scale. Knowledge systems for AI agents in banking, RAG and GraphRAG platforms, agentic architectures. Currently leading the knowledge-base cell of Davivienda's AI-First strategy."
+        title="Edison Serrano · Data Scientist"
+        description="Data Scientist focused on machine learning, data analysis, and statistical modeling. Turning complex datasets into clear, useful decisions."
         keywords={[
-          'Juan Lara',
-          'AI Engineer',
-          'Production AI',
-          'RAG',
-          'Agentic Architectures',
-          'Knowledge Systems',
-          'LLM Ops',
-          'Knowledge Data Engineer',
-          'Google ADK',
-          'PyTorch'
+          'Edison Serrano',
+          'Data Scientist',
+          'Machine Learning',
+          'Data Analysis',
+          'Statistical Modeling',
+          'Python',
+          'Predictive Modeling'
         ]}
       />
       <div className="min-h-screen bg-white text-gray-900 dark:bg-brand-bg dark:text-brand-fg relative overflow-x-hidden">
@@ -83,7 +80,7 @@ export default function LandingPage() {
           >
             <motion.div variants={fadeInUp} className="mb-6 lg:mb-8">
               <p className="font-mono text-[11px] sm:text-xs tracking-[0.18em] uppercase text-gray-500 dark:text-brand-fg-muted">
-                <span className="text-cyan-700 dark:text-brand-accent">{ROLE}</span> · Production AI
+                <span className="text-cyan-700 dark:text-brand-accent">{ROLE}</span> · Data Analysis
               </p>
             </motion.div>
 

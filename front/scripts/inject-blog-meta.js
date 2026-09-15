@@ -86,9 +86,9 @@ function resolveImage(post) {
 }
 
 function injectForPost(sourceHtml, post) {
-  const title = post.title ? `${post.title} | Juan Lara` : 'Juan Lara | Portfolio';
+  const title = post.title ? `${post.title} | Edison Serrano` : 'Edison Serrano | Portfolio';
   const description = truncate(post.excerpt || post.description || '', 200) ||
-    'Research Assistant at Harvard Business School writing about Machine Learning, AI Agents, and NLP.';
+    'Data Scientist writing about machine learning, data analysis, and statistical modeling.';
   const url = `${SITE_URL}/blog/${encodeURIComponent(post.category)}/${encodeURIComponent(post.slug)}`;
   const image = resolveImage(post);
 

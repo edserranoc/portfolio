@@ -31,7 +31,7 @@ jq '.posts["ontology-to-agent-toolbox"].prereqs' knowledge-base/posts.json
 
 **To read the full text of a post**, open the file at `front/public/blog/posts/<category>/<slug>.md`. Slugs are stable canonical IDs.
 
-When citing a post to the user, link as `https://juanlara18.github.io/portfolio/#/blog/<slug>`.
+When citing a post to the user, link as `https://edserranoc.github.io/portfolio/#/blog/<slug>`.
 
 ## Build pipeline
 

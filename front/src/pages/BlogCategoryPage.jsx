@@ -113,8 +113,8 @@ export default function BlogCategoryPage() {
   return (
     <>
       <SEO
-        title={`${displayInfo.title} · Juan Lara`}
-        description={`Browse ${displayInfo.title} posts by Juan Lara. Engineering notes on production AI, RAG systems, agentic architectures, and LLM ops.`}
+        title={`${displayInfo.title} · Edison Serrano`}
+        description={`Browse ${displayInfo.title} posts by Edison Serrano. Notes on machine learning, data analysis, statistical modeling, and practical data work.`}
       />
       <div className="bg-white dark:bg-brand-bg text-gray-900 dark:text-brand-fg min-h-screen">
       {/* Hero Section */}

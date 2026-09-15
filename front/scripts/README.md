@@ -230,7 +230,7 @@ bucket once you're ready to deploy at scale.
 1. **Create a Cloudflare account** (free) and enable R2 from the dashboard
    sidebar. R2 requires adding a payment method, but the free tier covers 10 GB
    storage and unlimited egress — enough for thousands of posts.
-2. **Create a bucket.** Pick any name (e.g. `juanlara-portfolio-audio`).
+2. **Create a bucket.** Pick any name (e.g. `edisonserrano-portfolio-audio`).
    Region: _Automatic_.
 3. **Enable public access.** Bucket → _Settings_ → _Public access_ → _Allow
    public access_ → _Connect domain_ or copy the `pub-xxxxxxxxxxxxxxxx.r2.dev`

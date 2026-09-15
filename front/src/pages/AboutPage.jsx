@@ -429,12 +429,10 @@ const courses = [
           'Edison Serrano',
           'Data Scientist',
           'Applied Mathematician',
-          'RAG',
-          'Agentic Architectures',
-          'Knowledge Systems',
-          'LLM Ops',
-          'Knowledge Data Engineer',
-          'Davivienda'
+          'Machine Learning',
+          'Data Analysis',
+          'Statistical Modeling',
+          'Predictive Modeling'
         ]}
       />
       <div className="bg-white dark:bg-brand-bg text-gray-900 dark:text-brand-fg min-h-screen">
