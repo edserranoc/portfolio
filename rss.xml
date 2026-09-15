@@ -4,7 +4,7 @@
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Juan Lara — Writing</title>
+    <title>Edison Serrano — Writing</title>
     <link>https://edserranoc.github.io/portfolio/blog</link>
     <atom:link href="https://edserranoc.github.io/portfolio/rss.xml" rel="self" type="application/rss+xml" />
     <description>Technical writing on machine learning, AI agents, NLP, and data engineering — research notes, field notes, and curiosities.</description>
@@ -29,7 +29,7 @@
     <category>Information Retrieval</category>
     <category>Computer Science</category>
     <enclosure url="https://pub-00d57ee081654fe389ef2660b8f38f69.r2.dev/audio/curiosities/100-posts-knowledge-graph-retrospective.mp3" length="6724080" type="audio/mpeg" />
-    <dc:creator>Juan Lara</dc:creator>
+    <dc:creator>Edison Serrano</dc:creator>
   </item>
   </channel>
 </rss>
