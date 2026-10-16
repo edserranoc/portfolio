@@ -87,30 +87,44 @@ const projects = [
     category: "scientific computing",
     featured: true,
     paper: "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.IPEC.2024.31"
-  }, 
-  {
-    id: 3,
-    name: "Real-Time Multi-Object Tracking (MOT) for Traffic Analytics",
-    description: "An end-to-end computer vision pipeline for real-time vehicle detection, persistent multi-object tracking, and automated traffic flow analytics. Utilizes YOLOv8 for detection, ByteTrack for low-score detection association during occlusions, and OpenCV to calculate vehicle speed, lane crossing counts, and movement trajectories.",
-    image: "",
-    tags: [
-    "Computer Vision",
-    "Multi-Object Tracking",
-    "YOLOv8",
-    "ByteTrack",
-    "OpenCV",
-    "PyTorch",
-    "Streamlit",
-    "Traffic Analytics"
-    ],
-    category: "upcoming",
-    featured: false,
   },
   {
+    id: 3,
+    name: "YOLOv8n - PPE Detection Using Computer Vision",
+    description: "I developed an end-to-end system using YOLOv8n that detects people without helmets or vests and generates severity-based events through ROI rules, person-PPE association, and temporal persistence, featuring evaluation, monitoring, and traceability (Python, PyTorch, Ultralytics).",
+    image: "PPE_Computer_Vision.jpg",
+    tags: [
+    "Computer Vision",
+    "Object Detection",
+    "YOLOv8n",
+    "PyTorch",
+    "ROI Rules",
+    "Event Generation"
+    ],
+    category: "ml",
+    github: "https://github.com/edserranoc/PPE-detection-using-computer-vision/tree/main",
+    featured: false,
+  },
+    {
     id: 4,
+    name: "Statistical Inverse Problems & Bayesian Inference",
+    description: "A comprehensive coursework and project repository implementing computational and statistical methods for ill-posed inverse problems. Features hands-on implementations of deterministic regularization alongside Bayesian statistical approaches for parameter estimation, noise filtering, and data reconstruction from indirect measurements.",
+    image: "unnormalizeddistribution.png",
+    tags: [
+  "Tikhonov regularization",
+  "Bayesian Inference",
+  "MCMC",
+  "Stein Variational Gradient Descent"
+    ],
+    category: "scientific computing",
+    featured: false,
+    github: "https://github.com/edserranoc/Inverse_Problems_Course"
+  }, 
+  {
+    id: 5,
     name: "Sermar Ingenieros website",
     description: "Created a responsive and visually appealing website for Sermar Ingenieros, a civil engineering company, using modern web development technologies. The site features project showcases, service descriptions, and contact information.",
-    image: "",
+    image: "meeting-scribe.png",
     tags: [],
     github: "",
     category: "upcoming",
