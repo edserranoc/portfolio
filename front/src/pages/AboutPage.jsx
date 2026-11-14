@@ -273,6 +273,30 @@ export default function AboutPage() {
 // Experience data
 const experiences = [
   {
+    role: "Data Scientist",
+    company: "AECSA",
+    period: "October 2026 - Present",
+    location: "Bogotá, Colombia",
+    description:
+    "Designed and deployed end-to-end AI, machine learning, and statistical solutions in on-premise production environments, driving process automation, and real-time operational optimization.",
+    responsibilities: [
+      "Design, develop, and deploy end-to-end AI and backend solutions in on-premise production environments, including agentic systems, RAG pipelines, and voicebots.",
+      "Advance Speech Analytics methodologies and real-time mathematical, statistical (frequentist and Bayesian), and deep learning models to optimize operational workflows.",
+      "Implement generative AI model, including Diffusion models, VAEs, and LLMs"
+    ],
+    skills: [
+      "Agentic AI",
+      "LLM",
+      "RAG",
+      "Qdrant",
+      "Diffusers",
+      "VAE",
+      "Speech Analytics",
+      "Machine Learning"
+    ],
+    logo: "aecsa.png"
+},
+{
     role: "Research Assistant | Scientific Computing",
     company: "Universität Duisburg-Essen",
     period: "December 2025 - May 2026",
@@ -583,8 +607,11 @@ const courses = [
                   {/* <SkillItem name="RAG & GraphRAG Architectures" icon={Database} />
                   <SkillItem name="LLM Fine-Tuning & PEFT" icon={Code} />
                   <SkillItem name="Google ADK 2.0 & LangGraph" icon={Layers} /> */}
-                  <SkillItem name="LLM Fine-Tuning & PEFT" icon={Code} />
+                  <SkillItem name="RAG" icon={Database} />
+                  <SkillItem name="Langgraph & Langchain" icon={Layers} />
                   <SkillItem name="Vector Databases" icon={BrainCircuit} />
+                  <SkillItem name="ComfyUI & Ollama" icon={Code} />
+                  
                 </div>
               </div>
              
@@ -596,6 +623,7 @@ const courses = [
                 </h3>
                 <div className="space-y-1">
                   {/* <SkillItem name="Model Serving & Endpoints" icon={Globe} /> */}
+                  <SkillItem name="Endpoints" icon={Globe} />
                   <SkillItem name="CI/CD & Deployment" icon={Github} />
                   {/* <SkillItem name="GCP (Gemini Enterprise Agent Platform)" icon={Box} /> */}
                   <SkillItem name="Model Drift & Monitoring" icon={LineChart} />
@@ -609,10 +637,10 @@ const courses = [
                   Cloud & Data Engineering
                 </h3>
                 <div className="space-y-1">
-                  <SkillItem name="GCP" icon={Cloud} />
-                  <SkillItem name="BigQuery & Spark" icon={Layers} />
+                  <SkillItem name="Google Cloud Platform" icon={Cloud} />
+                  {/* <SkillItem name="BigQuery & Spark" icon={Layers} /> */}
                   <SkillItem name="Containerization (Docker)" icon={Box} />
-                  <SkillItem name="ETL & Data Pipelines" icon={Database} />
+                  {/* <SkillItem name="ETL & Data Pipelines" icon={Database} /> */}
                 </div>
               </div>
 
